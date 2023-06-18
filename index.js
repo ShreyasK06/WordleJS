@@ -107,6 +107,7 @@ function setGame() {
     }
 
     enter.addEventListener('click', function () {
+        pressed = false;
         console.log("enter clicked");
         console.log("pressed", pressed);
         console.log("over", over(currCol, gameOver));
@@ -118,7 +119,7 @@ function setGame() {
             checkWord(inputText);
             currCol++;
             inputText = "";
-            obj.innerText = inputText;
+            obj.innerHTML = inputText;
             ready = false;
             giveAlert(gameOver, currCol);
 

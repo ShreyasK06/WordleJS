@@ -107,6 +107,10 @@ function setGame() {
     }
 
     enter.addEventListener('click', function () {
+        console.log("enter clicked");
+        console.log("pressed", pressed);
+        console.log("over", over(currCol, gameOver));
+        console.log(currCol);
         let obj = document.getElementById("input");
         if (!pressed && !over(currCol, gameOver) && inputText.length == 5) {
             ready = true;

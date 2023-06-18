@@ -107,6 +107,7 @@ function setGame() {
     }
 
     enter.addEventListener('click', function () {
+        let obj = document.getElementById("input");
         if (!pressed && !over(currCol, gameOver) && inputText.length == 5) {
             ready = true;
             pressed = true;
@@ -122,7 +123,6 @@ function setGame() {
     });
 
     mode.addEventListener("click", function () {
-        let obj = document.getElementById("input");
         if (easy) {
             easy = false;
             hard = true;

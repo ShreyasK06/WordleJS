@@ -122,6 +122,7 @@ function setGame() {
     });
 
     mode.addEventListener("click", function () {
+        let obj = document.getElementById("input");
         if (easy) {
             easy = false;
             hard = true;

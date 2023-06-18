@@ -74,6 +74,7 @@ function keyPressed(i) {
 function setGame() {
     let mode = document.querySelector("#mode");
     let gameType = document.getElementById("gameType");
+    let enter = document.getElementById("enter");
     output = [];
     input = [];
     alpha = [];
@@ -105,6 +106,21 @@ function setGame() {
         alpha.push(row);
     }
 
+    enter.addEventListener('click', function () {
+        if (!pressed && !over(currCol, gameOver) && inputText.length == 5) {
+            ready = true;
+            pressed = true;
+            checkWord(inputText);
+            currCol++;
+            inputText = "";
+            obj.innerText = inputText;
+            ready = false;
+            giveAlert(gameOver, currCol);
+
+
+        }
+    });
+
     mode.addEventListener("click", function () {
         if (easy) {
             easy = false;
@@ -120,6 +136,7 @@ function setGame() {
         }
     });
 }
+
 
 
 

@@ -19,7 +19,7 @@ a {
     color: black;
 }
 
-#mode {
+button {
     cursor: pointer;
     font: bold;
     font-family: Rubik, sans-serif;

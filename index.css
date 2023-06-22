@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
+html {
+    margin: 0%;
+}
+
 body {
     font-family: Rubik, sans-serif;
     text-align: center;
@@ -10,7 +14,7 @@ body {
 
 
 h1 {
-    width: 600px;
+    width: 100vh;
     border: 6px solid black;
     border-radius: 10px;
     margin-left: auto;
@@ -24,7 +28,9 @@ a {
 }
 
 h2 {
-    width: 400px;
+    width: 37vh;
+    border: 4px solid black;
+    border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgba(255, 255, 255, 0.4);
@@ -50,8 +56,8 @@ button:active {
 }
 
 #input {
-    height: 50px;
-    width: 600px;
+    height: 5vh;
+    width: 25vh;
     background-color: gray;
     border: 6px solid black;
     border-radius: 20px;
@@ -64,8 +70,8 @@ button:active {
 }
 
 #output {
-    height: 250px;
-    width: 550px;
+    height: 45vh;
+    width: 95vh;
     background-color: gray;
     border: 6px solid black;
     border-radius: 20px;
@@ -76,8 +82,8 @@ button:active {
 }
 
 #alpha {
-    height: 220px;
-    width: 600px;
+    height: 40vh;
+    width: 100vh;
     background-color: gray;
     border-radius: 20px;
     margin: 25px auto;

@@ -75,6 +75,9 @@ function setGame() {
     let mode = document.querySelector("#mode");
     let gameType = document.getElementById("gameType");
     let enter = document.getElementById("enter");
+    let reset = document.getElementById("reset");
+    gameType.innerText = "DIFFICULTY: EASY";
+    console.log(gameType.innerText);
     output = [];
     input = [];
     alpha = [];
@@ -141,6 +144,8 @@ function setGame() {
             console.log(gameType.innerText);
         }
     });
+
+    reset.addEventListener('click', resetGame);
 }
 
 
@@ -205,6 +210,41 @@ function giveAlert(done, col) {
     } else if (col > 5) {
         window.alert("OH NO YOU RAN OUT OF TRIES");
     }
+}
+
+function resetGame() {
+    output = [];
+    input = [];
+    alpha = [];
+    a = 0;
+    i = 0;
+    for (let r = 0; r < outRows; r++) {
+        let row = [];
+        for (let c = 0; c < outCols; c++) {
+            row.push(' ');
+            let tile = document.getElementById(i);
+            tile.classList.remove('green');
+            tile.classList.remove('red');
+            tile.classList.remove('yellow');
+            tile.innerText = "";
+            i++;
+        }
+    }
+
+    for (let c = 0; c < alphaRowsCols; c++) {
+        let row = [];
+        row.push(' ');
+        let tile = document.getElementById(alphabet[a]);
+        tile.classList.remove('green');
+        tile.classList.remove('red');
+        tile.classList.remove('yellow');
+        a++;
+    }
+    word = words[Math.floor(Math.random() * (words.length))];
+    currCol = 0;
+    console.log(word);
+
+
 }
 
 
